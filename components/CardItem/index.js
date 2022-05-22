@@ -1,12 +1,21 @@
+import Link from "next/link";
 import { Card } from "react-bootstrap";
 
-const CardItem = () => {
+const CardItem = ({
+  authorName,
+  authorAvatar,
+  publishedDate,
+  authorImage,
+  blogTitle,
+  blogSubtitle,
+  slugLink,
+}) => {
   return (
     <Card className={`fj-card`}>
       <div className="card-body-wrapper">
         <Card.Header className="d-flex flex-row">
           <img
-            src={"https://via.placeholder.com/150"}
+            src={authorAvatar}
             className="rounded-circle mr-3"
             height="50px"
             width="50px"
@@ -14,23 +23,24 @@ const CardItem = () => {
           />
           <div>
             <Card.Title className="font-weight-bold mb-1">
-              Placeholder Author
+              {authorName}
             </Card.Title>
-            <Card.Text className="card-date">Placeholder Date</Card.Text>
+            <Card.Text className="card-date">{publishedDate}</Card.Text>
           </div>
         </Card.Header>
         <div className="view overlay">
-          <Card.Img
-            src="https://via.placeholder.com/250"
-            alt="Card image cap"
-          />
+          <Card.Img src={authorImage} alt="Author" />
         </div>
         <Card.Body>
-          <Card.Title className="card-main-title">Placeholder Title</Card.Title>
-          <Card.Text>Placeholder Subtitle</Card.Text>
+          <Card.Title className="card-main-title">{blogTitle}</Card.Title>
+          <Card.Text>{blogSubtitle}</Card.Text>
         </Card.Body>
       </div>
-      <a className="card-button">Read More</a>
+      {slugLink && (
+        <Link {...slugLink}>
+          <a className="card-button">Read More</a>
+        </Link>
+      )}
     </Card>
   );
 };

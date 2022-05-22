@@ -10,14 +10,14 @@ const AuthorIntro = () => {
             width={64}
             height={64}
             className="mr-3"
-            src="https://avatars1.githubusercontent.com/u/9482724?s=460&u=69a6acab13fd5547a4e316e496b573271077147f&v=4"
+            src="https://media-exp1.licdn.com/dms/image/C4E03AQHLhGqn5kA4cw/profile-displayphoto-shrink_200_200/0/1516643707150?e=1657152000&v=beta&t=nlX7oe7qvfv6qeMcUr5ao9R0ikho8clBE_AGp8oOu1o"
             alt="Generic placeholder"
           />
           <Media.Body>
             <h5 className="font-weight-bold mb-0">Hello Friends,</h5>
             <p className="welcome-text">
               My name is Vishant Rastogi and I am an experienced software
-              engineer. and this is my blog page with NextJS & Sanity.
+              engineer and this is my blog page with NextJS & Sanity.
             </p>
           </Media.Body>
         </Media>
